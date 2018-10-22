@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Weather App</title>
+{{> stylerefs}}
+<body>
+
+<!-- Navbar -->
+{{> navbar}}
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">WEATHER RESULT</h1>
+  <p class="w3-xlarge">Result of search</p>
+
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird w3-center">
+      <h5>
+        <p>Address: {{address}}  </p>
+        <p>Summary: {{summary}}  </p>
+        <p>Temperature: {{temperature}}  </p>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+{{> footer}}
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Weather App</title>
+{{> stylerefs}}
+<body>
+
+<!-- Navbar -->
+{{> navbar}}
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">WEATHER APP</h1>
+  <p class="w3-xlarge">Get the weather anywhere</p>
+  <form action ="/" method="post">
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" formaction="/form">Get Started</button>
+  </form>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Welcome</h1>
+      <h2>Winter</h2>
+      <h5 class="w3-padding-32">Winter is the coldest season of the year in polar and temperature zones.</h5>
+      <p class="w3-text-grey">Click on search in the navigation bar, to begin.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer -->
+{{> footer}}
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

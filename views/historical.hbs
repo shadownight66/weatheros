@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Weather App</title>
+{{> stylerefs}}
+<body>
+
+<!-- Navbar -->
+{{> navbar}}
+
+<!-- Header -->
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">HISTORICAL WEATHER</h1>
+  <p class="w3-xlarge">List of previous weather records</p>
+
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird w3-center">
+      <form action = "/" method = "post">
+        <button class = "w3-button w3-lime w3-large" type = "submit" formaction = "/delete">Delete All Records</button>
+      </form>
+      <h5>
+        <table class="w3-table-all w3-centered">
+          {{#list item}}  <tr> <td>{{address}}</td> <td>{{summary}}</td> <td>{{temperature}}</td> </tr>  {{/list}}
+        </table>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+{{> footer}}
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
