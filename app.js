@@ -13,7 +13,7 @@ server.use(bodyParser.urlencoded( {extended: true} ));
 server.set('view engine','hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
-var weatherdatas;
+var weatherdata;
 
 hbs.registerHelper('list', (items, options) => {
   items = weatherdata;
