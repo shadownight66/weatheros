@@ -15,7 +15,7 @@ const saveData = (newData) => {
 
       db.collection('WeatherCollection').insertOne(newData, (err, result) => {
         if (err) {
-          reject('Unable to insert');
+          reject('Unable to inserts');
         }
         resolve(result);
       })

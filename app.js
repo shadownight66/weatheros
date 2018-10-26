@@ -16,7 +16,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 var weatherdata;
 
 hbs.registerHelper('list', (items, options) => {
-  items = weatherdata;
+  items = weatherdatas;
   var out = "<tr><th>Address</th><th>Summary</th><th>Temp</th></tr>"
   const length = items.length;
   for(var i=0; i<length; i++) {
